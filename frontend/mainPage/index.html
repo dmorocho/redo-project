@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>School of Hard Knocks</title>
+  </head>
+  <body class="grid-container">
+    <div class="grid-container">
+      <div id="header" class="Center">
+        <h3>Welcome To The Data Base</h3>
+      </div>
+
+      <div id="Options" class="Center">
+        <label>Select From The Drop Down</label>
+        <select name="" id="mainSelect">
+          <option value="" id="Select" disabled selected>Select Option</option>
+          <option value="class">Manage Class</option>
+          <option value="students">Manage Students</option>
+        </select>
+      </div>
+
+      <div id="UserRequest" class="Center">
+        <div id="ManageClassDiv">
+          <p><strong>Get All Classes</strong></p>
+          <button id="getClasses">Get Classes</button>
+          <br />
+          <hr />
+          <br />
+          <p>Delete Class</p>
+          <form action="" id="deleteClass">
+            <select id="deleteClassSec"> </select>
+            <button id="deleteClass">delete</button>
+          </form>
+          <br />
+          <hr />
+          <br />
+          <p>Add Class</p>
+          <form action="" id="AddClassFrm">
+            <label for="class_name">Class Name</label>
+            <br />
+            <input
+              type="text"
+              name="class_name"
+              id="classname"
+              required
+            /><br />
+
+            <label for="teacher_name">Teacher Name</label>
+            <br />
+            <input type="text" name="teacher_name" id="teachername" required />
+            <br />
+            <br />
+            <input type="submit" value="Add Class" />
+          </form>
+        </div>
+
+        <div id="ManageStudentDiv">
+          <br />
+          <form id="addStudent">
+            <p>Enroll Student</p>
+            <br />
+            <label for="student_name">Student Name</label><br />
+            <input
+              type="text"
+              id="student_name"
+              name="student_name"
+              placeholder="name"
+              required
+            /><br />
+            <label for="age">Age</label>
+            <br />
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="age"
+              required
+            /><br />
+            <label for="city">City</label>
+            <br />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="city"
+              required
+            /><br />
+            <br />
+            <label for="chooseStudentClass">Choose a Class</label>
+            <select id="chooseStudentClass" required> </select
+            ><br />
+            <label for="grade">Grade</label>
+            <br />
+            <input
+              type="number"
+              id="grade"
+              name="grade"
+              placeholder="grade"
+              required
+            /><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+          <hr />
+          <p>Get All Students</p>
+          <br />
+          <form action="" id="chooseStudent">
+            <label for="chooseStudentClass">Choose a Class</label><br />
+            <select id="chooseSClass" required> </select>
+            <br />
+            <br />
+            Failing or Passing
+            <br />
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <input type="submit" value="Get Student" />
+          </form>
+          <br />
+          <hr />
+        </div>
+      </div>
+      <div class="Center" id="compResponse"></div>
+    </div>
+  </body>
+</html>
